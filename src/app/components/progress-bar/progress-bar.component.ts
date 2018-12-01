@@ -12,8 +12,8 @@ export class ProgressBarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const bar = document.getElementsByClassName('progress bar')[0];
-    const container = document.getElementsByClassName('progress container')[0];
+    const bar = <HTMLElement>document.getElementsByClassName('progress bar')[0];
+    const container = <HTMLElement>document.getElementsByClassName('progress container')[0];
     bar.style.width = this.width;
     bar.style.backgroundColor = this.color;
     container.style.border = '2px solid ' + this.color;
