@@ -1,0 +1,35 @@
+div.container {
+  background-color: rgba(128,128,128, 0.15);
+  min-height: 100vh;
+  main {
+    padding-top: 55px;
+    padding-bottom: 50px;
+    font-family: OpenSansRegular, "Open Sans", sans-serif;
+    div.image-wrapper {
+      padding: 3px;
+      margin: 0 auto;
+      width: 130px;
+      img {
+        width: 100%;
+      }
+    }
+    div.description {
+      font-size: 1rem;
+      padding: 14px;
+      text-align: justify;
+      margin-top: 30px;
+    }
+    div.button-wrapper {
+      width: 250px;
+      margin: 30px auto 0;
+      button {
+        padding: 15px;
+        color: white;
+        background-color: var(--blue);
+        font-weight: 800;
+        width: 100%;
+        border: none;
+      }
+    }
+  }
+}

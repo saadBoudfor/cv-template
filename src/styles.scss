@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --green: #93A585;
+  --blue: #3D404E;
+  --brown: #654B51;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+@font-face {
+  font-family: ProzaLibreBold;
+  src: url(assets/police/ProzaLibre-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url(assets/police/OpenSans-Regular.ttf);
+}

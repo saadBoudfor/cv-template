@@ -1,0 +1,22 @@
+div.container {
+  min-height: 100vh;
+  background-color: var(--blue);
+  position: relative;
+  div.presentation {
+    padding: 50px 14px;
+    font-family: ProzaLibreBold, "Proza Libre", sans-serif;
+    font-size: 2.2rem;
+
+    p{
+      color: white;
+      span {
+        color: var(--green);
+      }
+    }
+    app-down-button {
+      position: absolute;
+      bottom: 20px;
+      left: calc(50vw - 30px);
+    }
+  }
+}

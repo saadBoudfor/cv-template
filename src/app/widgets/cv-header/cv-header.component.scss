@@ -1,0 +1,28 @@
+$icon-size: 50px;
+
+header {
+  &.scrolling {
+    border-bottom: 1px solid #dddddd;
+    background-color: white;
+  }
+  z-index: 800;
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  height: $icon-size + 2;
+  div.content {
+    margin: 7px 14px 0 14px;
+    img.logo {
+      width: $icon-size;
+      margin-top: 3px;
+    }
+    i.material-icons {
+      color: var(--green);
+      float: right;
+      font-size: $icon-size - 10;
+    }
+  }
+
+}
+main {
+  margin-top: 150px;
+}

@@ -1,0 +1,49 @@
+div.wrapper {
+  font-size: 1.1rem;
+  font-family: OpenSansRegular sans-serif;
+  display: flex;
+  padding-top: 20px;
+  margin: 0 auto 5px;
+  background-color: white;
+  min-width: 400px;
+  div.image {
+    padding-left: 14px;
+    padding-right: 37px;
+    img {
+      width: 52px;
+    }
+  }
+  div.description {
+    color: var(--blue);
+    div.job {
+      font-size: 1.3rem;
+    }
+    div.company {
+      color: var(--brown);
+      margin-top: 5px;
+    }
+    div.button-wrapper {
+      margin-top: 14px;
+      margin-bottom: 8px;
+      button {
+        padding: 8.5px 20px;
+        color: white;
+        background-color: var(--blue);
+        border: none;
+        span.text {
+          margin-right: 38px;
+          line-height: 14px;
+          font-size: 1.1rem;
+          font-weight: 800;
+        }
+        i.material-icons {
+          line-height: 14px;
+          font-size: 1.5rem;
+          font-weight: 800;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+  }
+}

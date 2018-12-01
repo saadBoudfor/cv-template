@@ -1,0 +1,13 @@
+$size: 60px;
+
+div.circle-wrapper {
+  background-color: rgb(128,128,128);
+  opacity: 0.15;
+  height: $size;
+  width: $size;
+  text-align: center;
+  border-radius: 50%;
+  i.material-icons {
+    font-size: $size;
+  }
+}
