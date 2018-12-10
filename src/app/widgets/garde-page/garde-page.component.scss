@@ -1,13 +1,15 @@
 div.container {
   min-height: 100vh;
-  background-color: var(--blue);
   position: relative;
+  background: var(--blue) url(../../../assets/photos/architect-architectural-architecture-273661.jpg) no-repeat;
+  background-size: 100%;
+  object-fit: cover;
   div.presentation {
     padding: 50px 14px;
     font-family: ProzaLibreBold, "Proza Libre", sans-serif;
     font-size: 2.2rem;
 
-    p{
+    p {
       color: white;
       span {
         color: var(--green);

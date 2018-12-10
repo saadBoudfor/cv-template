@@ -1,15 +1,12 @@
 <div class="container">
   <main>
-    <div class="title wrapper">
-      <h2>Mes experiences</h2>
-    </div>
-
+    <app-title [title]="'Mes experiences'" [icon]="'business_center'"></app-title>
     <div class="image wrapper">
-      <img src="../../../assets/photos/experience.jpeg" alt="">
+      <img src="./assets/photos/experience.jpeg" alt="">
     </div>
 
     <div class="experience wrapper">
-      <app-experience-card *ngFor="let experience of experiences"  [experience]="experience"></app-experience-card>
+      <app-experience-card *ngFor="let experience of experiences" [experience]="experience"></app-experience-card>
     </div>
   </main>
 

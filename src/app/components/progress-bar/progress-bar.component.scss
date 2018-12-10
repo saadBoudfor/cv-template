@@ -1,10 +1,10 @@
 div.progress.container {
   height: 30px;
   border: 2px solid var(--green);
+  width: 100%;
   div.progress.bar {
     width: 85%;
     background-color: var(--green);
     height: 30px;
-    transition : width 5s ease;
   }
 }

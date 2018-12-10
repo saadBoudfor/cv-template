@@ -10,6 +10,17 @@ import { DescriptionWidgetComponent } from './widgets/description-widget/descrip
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
 import { ExperienceWidgetComponent } from './widgets/experience-widget/experience-widget.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import {RouterModule, Routes} from "@angular/router";
+import { SkillsPageComponent } from './widgets/skills-page/skills-page.component';
+import { TitleComponent } from './components/title/title.component';
+import { ContactPageComponent } from './widgets/contact-page/contact-page.component';
+import { InputComponent } from './components/input/input.component';
+import { TextareaComponent } from './components/textarea/textarea.component';
+import { ButtonComponent } from './components/button/button.component';
+import { FooterComponent } from './widgets/footer/footer.component';
+
+
+const routes: Routes = [];
 
 
 @NgModule({
@@ -21,10 +32,18 @@ import { ProgressBarComponent } from './components/progress-bar/progress-bar.com
     DescriptionWidgetComponent,
     ExperienceCardComponent,
     ExperienceWidgetComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    SkillsPageComponent,
+    TitleComponent,
+    ContactPageComponent,
+    InputComponent,
+    TextareaComponent,
+    ButtonComponent,
+    FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

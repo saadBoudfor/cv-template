@@ -5,11 +5,6 @@
   --brown: #654B51;
 }
 
-body {
-  overflow: hidden;
-  margin: 0;
-}
-
 @font-face {
   font-family: ProzaLibreBold;
   src: url(assets/police/ProzaLibre-Bold.ttf);
@@ -19,3 +14,10 @@ body {
   font-family: OpenSansRegular;
   src: url(assets/police/OpenSans-Regular.ttf);
 }
+
+body {
+  margin: 0;
+  font-family: OpenSansRegular, "Open Sans", sans-serif;
+}
+
+

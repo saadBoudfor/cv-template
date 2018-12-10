@@ -7,10 +7,5 @@ import {Component, OnInit} from '@angular/core';
 export class AppComponent implements OnInit{
   public state = '';
   ngOnInit(): void {
-    document.getElementById('main').onscroll = function ($event) {
-    };
-  }
-  onPageScrolling() {
-    this.state = 'scrolling';
   }
 }
