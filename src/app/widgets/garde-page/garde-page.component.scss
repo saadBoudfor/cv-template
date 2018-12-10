@@ -1,14 +1,12 @@
 div.container {
   min-height: 100vh;
   position: relative;
-  background: var(--blue) url(../../../assets/photos/architect-architectural-architecture-273661.jpg) no-repeat;
-  background-size: 100%;
-  object-fit: cover;
+  background: url(../../../assets/photos/architect.jpg) no-repeat top;
+  background-size: cover;
   div.presentation {
     padding: 50px 14px;
     font-family: ProzaLibreBold, "Proza Libre", sans-serif;
     font-size: 2.2rem;
-
     p {
       color: white;
       span {
@@ -20,5 +18,11 @@ div.container {
       bottom: 20px;
       left: calc(50vw - 30px);
     }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  div.container {
+    background: url(../../../assets/photos/architect-mobile.jpg) no-repeat top;
   }
 }
