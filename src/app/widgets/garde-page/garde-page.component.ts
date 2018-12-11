@@ -11,8 +11,4 @@ export class GardePageComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  goToDescription(){
-
-  }
 }

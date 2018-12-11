@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-down-button',
   templateUrl: 'down-button.component.html',
   styleUrls: ['down-button.component.scss']
 })
-export class DownButtonComponent implements OnInit {
+export class DownButtonComponent {
+  @Input() id: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  scrollToElement(elementID) {
+    const $element = <any>document.getElementById(elementID);
+    $element.scrollIntoView({ block: 'end',  behavior: 'smooth' })
   }
-
 }
