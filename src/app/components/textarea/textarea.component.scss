@@ -1,0 +1,28 @@
+div.b4.text-area {
+  display: flex;
+  padding: 5px;
+  margin-bottom: 5px;
+  background: white;
+  border: 2px solid var(--blue);
+  textarea {
+    // text style:
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 1.4rem;
+    // form style:
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    line-height: 25px;
+    background-color: transparent;
+    margin: 0;
+    padding: 0 0 0 16px;
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 1;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+}
+

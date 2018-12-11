@@ -1,0 +1,17 @@
+<div class="container">
+  <main>
+    <app-title [title]="'Mes compétences'" [icon]="'style'"></app-title>
+    <div class="image">
+      <img src="./assets/photos/skills.jpeg" alt="">
+    </div>
+
+    <div class="skills">
+      <div class="skill" *ngFor="let skill of skills">
+        <div class="name">{{skill.name}}</div>
+        <app-progress-bar [color]="skill.color" [width]="skill.score"></app-progress-bar>
+      </div>
+
+    </div>
+  </main>
+
+</div>

@@ -1,0 +1,20 @@
+footer.cv.footer {
+  padding: 20px;
+  background-color: var(--blue);
+  color: white;
+  div.licence {
+    width: 120px;
+    margin: auto auto 10px;
+  }
+  div.icon {
+    width: 20px;
+    margin: auto;
+    img.linkedin {
+      background-image: url("../../../assets/photos/linkedin.svg");
+      width: 100%;
+      position: relative;
+      right: 10px;
+    }
+  }
+
+}

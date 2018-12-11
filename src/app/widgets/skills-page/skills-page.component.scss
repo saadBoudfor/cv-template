@@ -1,0 +1,25 @@
+div.container{
+  min-height: 100vh;
+  background-color: rgba(128,128,128, 0.15);
+  main {
+    padding-top: 55px;
+    div.image {
+      img {
+        width: 100%;
+      }
+    }
+    div.skills{
+      padding: 14px;
+      div.skill{
+        display: flex;
+        div.name {
+          padding: 10px;
+          width: 200px;
+        }
+        app-progress-bar {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
