@@ -2,8 +2,8 @@ $icon-size: 50px;
 
 header {
   &.scrolling {
-    border-bottom: 1px solid #dddddd;
-    background: white;
+    border-bottom: 1px solid var(--blue);
+    background: var(--blue);
     transition: background 0.8s ease ;
   }
   &.top {
