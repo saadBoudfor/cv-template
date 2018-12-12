@@ -18,6 +18,7 @@ export class ExperienceWidgetComponent implements OnInit {
       new Experience("Développeur FrontEnd", "BCV", "Fevrier 2018 - Avril 2018", "./assets/photos/logo-bcv.jpg"),
       new Experience("Développeur FullStack", "Orange Bank", "Mai 2018 - Aujourd'hui", "./assets/photos/natixis.png"),
     ]
+    console.log(JSON.stringify(this.experiences))
   }
 
 }

@@ -33,6 +33,7 @@ export class SkillsPageComponent implements OnInit {
       {name: 'Documentation', score: '60%', color: this.getColor()},
       {name: 'Mobile', score: '30%', color: this.getColor()},
     ];
+    console.log(JSON.stringify(this.skills))
   }
 
   ngOnInit() {
