@@ -1,9 +1,9 @@
-<app-cv-header [state]="state"></app-cv-header>
+<app-cv-header [state]="state" [cvLogo]="images.logo"></app-cv-header>
 <app-garde-page></app-garde-page>
-<app-description-widget></app-description-widget>
-<app-experience-widget></app-experience-widget>
-<app-skills-page></app-skills-page>
+<app-description-widget [userDetails]="resume.userDetail"></app-description-widget>
+<app-experience-widget [experiences]="resume.experience" [image]="images.description"></app-experience-widget>
+<app-skills-page [skills]="resume.skills" [image]="images.skill"></app-skills-page>
 <app-contact-page></app-contact-page>
-<app-footer></app-footer>
+<app-footer [image]="images.linkedin"></app-footer>
 
 

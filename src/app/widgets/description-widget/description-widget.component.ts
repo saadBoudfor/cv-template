@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+import {UserDetail} from "../../model/UserDetail";
 
 @Component({
   selector: 'app-description-widget',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DescriptionWidgetComponent implements OnInit {
 
-  constructor() { }
+  @Input() userDetails: UserDetail;
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.userDetails = new UserDetail();
   }
 
 }

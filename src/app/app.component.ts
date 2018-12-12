@@ -1,16 +1,25 @@
-import {Component, HostListener} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {Resume} from "./model/Resume";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../environments/environment";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent {
-  public state: string = 'top';
+export class AppComponent implements OnInit {
 
-  public description = {
-    profileImage: 'http://127.0.0.1:8887/boudfor/profile.png',
-    resume: "Diplômé d'un master 2 DAPM (Développement et Applications sur Plateformes Mobiles) à la faculté des sciences et techniques de La Garde, j’exerce actuellement le métier d’ingénieur d'études et de développement au sein du Groupe Capgemini. Je possède un master en cryptologie et j'ai déjà effectué un stage R&D, à l’institut Télécom-Bretagne sur la sécurité des bases de données relationnelles. J’apprécie particulièrement le langage Java et tout ce qui tourne autour (Android, JavaEE, Java Card ...) ainsi que les technologies web."
+  public state: string = 'top';
+  public resume: Resume = new Resume();
+  public images = {
+    description: 'experience.jpeg',
+    logo:  'b4-logo.png',
+    skill:'skills.jpeg',
+    linkedin: 'linkedin-sign.svg'
   };
+
+  constructor(private http: HttpClient) {
+  }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
@@ -20,4 +29,22 @@ export class AppComponent {
       this.state = 'scrolling'
     }
   }
+
+  private getConfig() {
+    return this.http.get(environment.baseURL + '/data/cv-v1.json')
+  }
+
+  private updateImagesUrl() {
+    Object.keys(this.images).forEach((key) => {
+      if(key) {
+        this.images[key] = environment.imagesServerURL + '/photos/images/' + this.images[key];
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.updateImagesUrl();
+    this.getConfig().subscribe((data: Resume) => this.resume = data);
+  }
+
 }

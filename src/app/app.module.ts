@@ -18,6 +18,7 @@ import { InputComponent } from './components/input/input.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FooterComponent } from './widgets/footer/footer.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 const routes: Routes = [];
@@ -43,6 +44,7 @@ const routes: Routes = [];
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

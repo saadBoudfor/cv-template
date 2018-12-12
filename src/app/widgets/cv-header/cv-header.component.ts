@@ -8,7 +8,7 @@ import {environment} from "../../../environments/environment";
 })
 export class CvHeaderComponent {
   private _state: string = '';
-  private _cvLogo: string = environment.imagesServerURL + '/photos/b4-logo.png';
+  private _cvLogo: string = '';
 
   @Input()
   set state(state: string) {
@@ -17,6 +17,11 @@ export class CvHeaderComponent {
 
   get state(): string {
     return this._state;
+  }
+
+  @Input()
+  set cvLogo(logo: string) {
+    this._cvLogo = logo;
   }
 
   get cvLogo(): string {
