@@ -15,7 +15,7 @@ div.container {
     }
     app-down-button {
       position: absolute;
-      bottom: 20px;
+      bottom: 40px;
       left: calc(50vw - 30px);
     }
   }
@@ -23,6 +23,7 @@ div.container {
 
 @media screen and (max-width: 750px) {
   div.container {
-    background: url(../../../assets/photos/architect-mobile.jpg) no-repeat top;
+    background: url(../../../assets/photos/architect-mobile-comp.jpg) no-repeat top;
+    background-size: cover;
   }
 }
