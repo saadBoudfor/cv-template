@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {Experience} from "../../model/Experience";
+import {Experience} from "../../model/data/Experience";
 
 @Component({
   selector: 'app-experience-widget',
@@ -15,7 +15,6 @@ export class ExperienceWidgetComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.experiences)
   }
 
 }

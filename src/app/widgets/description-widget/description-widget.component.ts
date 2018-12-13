@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {UserDetail} from "../../model/UserDetail";
+import {UserDetail} from "../../model/data/UserDetail";
 
 @Component({
   selector: 'app-description-widget',

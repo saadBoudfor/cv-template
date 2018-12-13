@@ -1,0 +1,12 @@
+div.container{
+  min-height: 100vh;
+  background-color: rgba(128,128,128, 0.15);
+  main {
+    padding-top: 55px;
+    div.image.wrapper {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

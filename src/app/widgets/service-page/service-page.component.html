@@ -1,0 +1,9 @@
+<div class="container">
+  <main>
+    <app-title [title]="'Mes Services'" [icon]="'business_center'"></app-title>
+    <div class="services">
+      <app-service *ngFor="let service of services" [service]="service"></app-service>
+    </div>
+  </main>
+
+</div>

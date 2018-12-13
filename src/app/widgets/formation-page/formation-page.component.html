@@ -1,0 +1,13 @@
+<div class="container">
+  <main>
+    <app-title [title]="'Mes Formations'" [icon]="'business'"></app-title>
+    <div class="image wrapper">
+      <img src="{{image}}" alt="">
+    </div>
+
+    <div class="experience wrapper">
+      <app-experience-card *ngFor="let experience of experiences" [experience]="experience"></app-experience-card>
+    </div>
+  </main>
+
+</div>

@@ -19,6 +19,9 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { ButtonComponent } from './components/button/button.component';
 import { FooterComponent } from './widgets/footer/footer.component';
 import {HttpClientModule} from "@angular/common/http";
+import { FormationPageComponent } from './widgets/formation-page/formation-page.component';
+import { ServiceComponent } from './components/service/service.component';
+import { ServicePageComponent } from './widgets/service-page/service-page.component';
 
 
 const routes: Routes = [];
@@ -40,7 +43,10 @@ const routes: Routes = [];
     InputComponent,
     TextareaComponent,
     ButtonComponent,
-    FooterComponent
+    FooterComponent,
+    FormationPageComponent,
+    ServiceComponent,
+    ServicePageComponent
   ],
   imports: [
     BrowserModule,

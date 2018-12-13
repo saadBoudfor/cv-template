@@ -1,0 +1,17 @@
+div.container {
+  text-align: center;
+  padding: 1rem;
+  img {
+    width: 60%;
+    margin: auto;
+  }
+  h4 {
+    font-family: ProzaLibreBold, "Proza Libre", sans-serif;
+    font-weight: bold;
+  }
+  p {
+    font-family: OpenSansRegular, "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: var(--blue);
+  }
+}
