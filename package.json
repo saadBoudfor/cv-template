@@ -25,6 +25,7 @@
     "material-icons": "^0.2.3",
     "rxjs": "^6.3.3",
     "tslib": "^1.9.0",
+    "webpack": "^4.27.1",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
