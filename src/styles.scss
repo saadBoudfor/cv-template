@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "scss/variables";
+
 :root {
   --green: #93A585;
   --blue: #3D404E;
@@ -7,17 +9,15 @@
 
 @font-face {
   font-family: ProzaLibreBold;
-  src: url(http://127.0.0.1:8887/police/ProzaLibre-Bold.ttf);
+  src: url(#{$url-root}/police/ProzaLibre-Bold.ttf);
 }
 
 @font-face {
   font-family: OpenSansRegular;
-  src: url(http://127.0.0.1:8887/police/OpenSans-Regular.ttf);
+  src: url(#{$url-root}/police/OpenSans-Regular.ttf);
 }
 
 body {
   margin: 0;
   font-family: OpenSansRegular, "Open Sans", sans-serif;
 }
-
-

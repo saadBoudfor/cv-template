@@ -1,7 +1,9 @@
+@import "../../../scss/variables";
+
 div.container {
   min-height: 100vh;
   position: relative;
-  background: url(http://127.0.0.1:8887/photos/images/architect.jpg) no-repeat top;
+  background: url(#{$url-root}+/photos/images/architect.jpg) no-repeat top;
   background-size: cover;
   div.presentation {
     padding: 50px 14px;
@@ -23,7 +25,7 @@ div.container {
 
 @media screen and (max-width: 750px) {
   div.container {
-    background: url(http://127.0.0.1:8887/photos/images/architect-mobile-comp.jpg) no-repeat top;
+    background: url(#{$url-root}/photos/images/architect-mobile-comp.jpg) no-repeat top;
     background-size: cover;
   }
 }
