@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  imagesServerURL: 'http://127.0.0.1:8887',
-  baseURL: 'http://127.0.0.1:8887'
+  imagesServerURL: 'http://176.142.246.203:9000/api',
+  baseURL: 'http://176.142.246.203:9000/api'
 };

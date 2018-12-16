@@ -10,6 +10,6 @@ export class DownButtonComponent {
 
   scrollToElement(elementID) {
     const $element = <any>document.getElementById(elementID);
-    $element.scrollIntoView({ block: 'end',  behavior: 'smooth' })
+    $element.scrollIntoView({ block: 'start',  behavior: 'smooth' })
   }
 }

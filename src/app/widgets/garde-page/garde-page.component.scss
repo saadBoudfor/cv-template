@@ -3,7 +3,7 @@
 div.container {
   min-height: 100vh;
   position: relative;
-  background: url(#{$url-root}+/photos/images/architect.jpg) no-repeat top;
+  background: url(#{$url-root}/photos/images/architect.jpg) no-repeat top;
   background-size: cover;
   div.presentation {
     padding: 50px 14px;
@@ -17,7 +17,7 @@ div.container {
     }
     app-down-button {
       position: absolute;
-      bottom: 40px;
+      bottom: 80px;
       left: calc(50vw - 30px);
     }
   }
