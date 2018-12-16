@@ -24,6 +24,7 @@ import {ServiceComponent} from './components/service/service.component';
 import {ServicePageComponent} from './widgets/service-page/service-page.component';
 import {CardDetailComponent} from './widgets/card-detail/card-detail.component';
 import {CvContentComponent} from './widgets/cv-content/cv-content.component';
+import {falseIfMissing} from "protractor/built/util";
 
 
 const routes: Routes = [
@@ -58,7 +59,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    RouterModule.forRoot(routes, {useHash: false})
   ],
   providers: [],
   bootstrap: [AppComponent]
