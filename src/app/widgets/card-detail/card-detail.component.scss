@@ -1,0 +1,72 @@
+div.card.details {
+  padding-top: 55px;
+  padding-bottom: 20px;
+  overflow: auto;
+  font-family: OpenSansRegular, "Open Sans", sans-serif;
+  main {
+    padding: 14px;
+    h4 {
+      font-family: ProzaLibreBold, "Proza Libre", sans-serif;
+      color: var(--blue);
+    }
+    ul {
+      li {
+        span {
+          i.key {
+            font-weight: 700;
+            text-decoration: none;
+            font-style: normal;
+            color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+  div.wrapper {
+    font-size: 1.1rem;
+    font-family: OpenSansRegular sans-serif;
+    display: flex;
+    padding-top: 20px;
+    margin: 0 auto 5px;
+    background-color: white;
+    div.image {
+      padding-left: 14px;
+      padding-right: 37px;
+      img {
+        width: 52px;
+      }
+    }
+    div.description {
+      color: var(--blue);
+      padding: 0 10px;
+      width: 100%;
+      div.job {
+        font-size: 1.3rem;
+        font-weight: bold;
+      }
+      div.company {
+        color: var(--brown);
+        margin-top: 5px;
+      }
+    }
+  }
+
+  div.button-wrapper {
+    margin-top: 30px;
+    margin-bottom: 8px;
+    button {
+      color: white;
+      background-color: var(--blue);
+      border: none;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      outline: none;
+      span.text {
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+}

@@ -23,9 +23,9 @@ div.container {
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 375px) {
   div.container {
     background: url(#{$url-root}/photos/images/architect-mobile-comp.jpg) no-repeat top;
-    background-size: cover;
+    background-size: auto;
   }
 }

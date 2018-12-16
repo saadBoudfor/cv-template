@@ -1,0 +1,9 @@
+<app-cv-header *ngIf="getImage('header').isEnabled" [state]="state" [cvLogo]="getImage('header').image"></app-cv-header>
+<app-garde-page></app-garde-page>
+<app-description-widget *ngIf="getImage('header').isEnabled"  [userDetails]="resume.userDetail"></app-description-widget>
+<app-service-page [services]="resume.services"></app-service-page>
+<app-experience-widget *ngIf="getImage('experiences').isEnabled"  [experiences]="resume.experience" [image]="getImage('experiences').image"></app-experience-widget>
+<app-skills-page *ngIf="getImage('skills').isEnabled"  [skills]="resume.skills" [image]="getImage('skills').image"></app-skills-page>
+<app-formation-page  *ngIf="getImage('formations').isEnabled" [formations]="resume.formation" [image]="getImage('formations').image"></app-formation-page>
+<app-contact-page></app-contact-page>
+<app-footer *ngIf="getImage('footer').isEnabled"  [image]="getImage('footer').image"></app-footer>

@@ -8,33 +8,6 @@ import {Widget} from "./services/widget";
   templateUrl: './app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit {
-
-  public state: string = 'top';
-  public resume: Resume = new Resume();
-
-  constructor(private http: HttpClient) {
-  }
-
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    if (window.scrollY === 0) {
-      this.state = 'top'
-    } else {
-      this.state = 'scrolling'
-    }
-  }
-
-  getImage(name) {
-    return Widget.get(name)
-  }
-
-  private getConfig() {
-    return this.http.get(environment.baseURL + '/data/cv-v1.json')
-  }
-
-  ngOnInit(): void {
-    this.getConfig().subscribe((data: Resume) => this.resume = data);
-  }
+export class AppComponent {
 
 }
