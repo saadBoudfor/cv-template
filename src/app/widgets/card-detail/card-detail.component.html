@@ -1,0 +1,40 @@
+<div class="card details">
+  <app-cv-header [state]="'scrolling'" [cvLogo]="getImage('header').image"></app-cv-header>
+  <div class="wrapper">
+    <div class="image">
+      <img [src]=experience.img alt="" src="">
+    </div>
+    <div class="description">
+      <div class="job">{{experience.job}}</div>
+      <div class="company">{{experience.company}}</div>
+      <div class="period">{{experience.period}}</div>
+    </div>
+  </div>
+  <main class="container">
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Id magni nemo nostrum quisquam recusandae repellendus voluptate.
+        Aliquam cumque facere fuga harum, incidunt quisquam vitae? Adipisci illo iure maxime nesciunt sed!
+      </p>
+    </div>
+    <div class="technical details">
+      <h4>Environnement technique:</h4>
+      <ul>
+        <li *ngFor="let key of objectKeys(this.experienceDetails)">
+          <span *ngIf="key !== 'purpose'">
+            <i class="key"> {{ titleCaseWord(key) + ' : ' }}</i>
+            {{this.experienceDetails[key]}}
+          </span>
+        </li>
+      </ul>
+      <h4> Contexte et objectifs:</h4>
+      <ul>
+        <li *ngFor="let purpose of this.purposes">{{purpose}}</li>
+      </ul>
+    </div>
+    <div class="button-wrapper">
+      <button (click)="goToHome()" class="button"><span class="text">Revenir à la page principale</span></button>
+    </div>
+  </main>
+</div>

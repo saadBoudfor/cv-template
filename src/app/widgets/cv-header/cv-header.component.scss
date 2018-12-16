@@ -11,6 +11,10 @@ header {
     background: none;
     transition: background 0.8s ease ;
   }
+  &.fixed {
+    border-bottom: 1px solid var(--blue);
+    background: var(--blue);
+  }
   z-index: 800;
   position: fixed;
   left: 0; right: 0; top: 0;
@@ -25,8 +29,10 @@ header {
     }
     i.material-icons {
       color: var(--green);
-      float: right;
       font-size: $icon-size - 10;
+      &.right {
+        float: right;
+      }
     }
   }
 }

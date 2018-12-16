@@ -5,6 +5,8 @@
 /dist-server
 /tmp
 /out-tsc
+/prod
+/.scannerwork
 
 # dependencies
 /node_modules
