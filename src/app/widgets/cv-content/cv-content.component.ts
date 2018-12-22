@@ -1,8 +1,7 @@
-import {Component, OnInit, HostListener} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Resume} from "../../model/data/Resume";
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../environments/environment";
 import {Widget} from "../../services/widget";
+import {CvRouterService} from "../../services/cv-router.service";
 
 @Component({
   selector: 'app-cv-content',
@@ -11,31 +10,24 @@ import {Widget} from "../../services/widget";
 })
 export class CvContentComponent implements OnInit {
 
-
-  public state: string = 'top';
   public resume: Resume = new Resume();
 
-  constructor(private http: HttpClient) {
-  }
-
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    if (window.scrollY === 0) {
-      this.state = 'top'
-    } else {
-      this.state = 'scrolling'
-    }
+  constructor(private $routerService: CvRouterService) {
   }
 
   getImage(name) {
     return Widget.get(name)
   }
 
-  private getConfig() {
-    return this.http.get(environment.baseURL + '/data/cv-v1.json')
-  }
-
   ngOnInit(): void {
-    this.getConfig().subscribe((data: Resume) => this.resume = data);
+    this.$routerService.Resume.subscribe(resume => {
+      if (resume) {
+        this.resume = resume;
+      } else {
+        this.$routerService.fetchData(this.$routerService.$locations.resume).subscribe((resume: Resume) => {
+          this.$routerService.updateData(this.$routerService.$locations.resume, resume);
+        })
+      }
+    })
   }
 }
