@@ -1,0 +1,15 @@
+div.cv-container {
+  section.content {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+  section.details {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+
+}

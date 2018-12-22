@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Experience} from "../../model/data/Experience";
-import {Router} from "@angular/router";
+import {CvRouterService} from "../../services/cv-router.service";
 
 @Component({
   selector: 'app-experience-card',
@@ -12,13 +12,13 @@ export class ExperienceCardComponent implements OnInit {
 
   @Input() experience: Experience;
 
-  constructor(private navigator: Router) {
+  constructor(private $routerService: CvRouterService) {
   }
 
   ngOnInit() {
   }
 
-  goTo() {
-    const promess = this.navigator.navigateByUrl('/details/12')
+  showDetails() {
+    this.$routerService.updateLocation(this.$routerService.$locations.experience);
   }
 }

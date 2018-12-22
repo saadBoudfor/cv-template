@@ -1,8 +1,6 @@
-import {Component, OnInit, Input} from '@angular/core';
-import {Widget} from "../../services/widget";
-import {ActivatedRoute, Route, Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
 import {Experience} from "../../model/data/Experience";
-import {ExperienceDetails} from "../../model/data/experience-details";
+import {CvRouterService} from "../../services/cv-router.service";
 
 @Component({
   selector: 'app-card-detail',
@@ -10,6 +8,9 @@ import {ExperienceDetails} from "../../model/data/experience-details";
   styleUrls: ['card-detail.component.scss']
 })
 export class CardDetailComponent implements OnInit {
+  constructor(private $routerService: CvRouterService) {
+
+  }
 
   public objectKeys = Object.keys;
 
@@ -36,7 +37,7 @@ export class CardDetailComponent implements OnInit {
     'Participer aux réunions de démonstration auprès des utilisateurs clés.'
   ];
 
-  constructor(private route: ActivatedRoute, private navigator: Router) {
+  constructor() {
   }
 
   titleCaseWord(word: string) {
@@ -45,15 +46,9 @@ export class CardDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    console.log('id: ' + id)
-  }
-
-  getImage(name) {
-    return Widget.get(name)
   }
 
   goToHome() {
-    const promess = this.navigator.navigateByUrl('/')
+    this.$routerService.updateLocation(this.$routerService.$locations.resume);
   }
 }

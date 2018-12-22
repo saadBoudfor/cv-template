@@ -10,7 +10,6 @@ import {DescriptionWidgetComponent} from './widgets/description-widget/descripti
 import {ExperienceCardComponent} from './components/experience-card/experience-card.component';
 import {ExperienceWidgetComponent} from './widgets/experience-widget/experience-widget.component';
 import {ProgressBarComponent} from './components/progress-bar/progress-bar.component';
-import {RouterModule, Routes} from "@angular/router";
 import {SkillsPageComponent} from './widgets/skills-page/skills-page.component';
 import {TitleComponent} from './components/title/title.component';
 import {ContactPageComponent} from './widgets/contact-page/contact-page.component';
@@ -24,14 +23,8 @@ import {ServiceComponent} from './components/service/service.component';
 import {ServicePageComponent} from './widgets/service-page/service-page.component';
 import {CardDetailComponent} from './widgets/card-detail/card-detail.component';
 import {CvContentComponent} from './widgets/cv-content/cv-content.component';
-import {falseIfMissing} from "protractor/built/util";
-
-
-const routes: Routes = [
-  {path: '', component: CvContentComponent},
-  {path: 'details/:id', component: CardDetailComponent},
-  {path: '**', redirectTo: ''}
-];
+import {TabContainerComponent} from './tab-container/tab-container.component';
+import {NgxLoggerLevel, LoggerModule} from "ngx-logger";
 
 @NgModule({
   declarations: [
@@ -54,12 +47,18 @@ const routes: Routes = [
     ServiceComponent,
     ServicePageComponent,
     CardDetailComponent,
-    CvContentComponent
+    CvContentComponent,
+    TabContainerComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {useHash: true})
+    LoggerModule.forRoot(
+      {
+        serverLoggingUrl: '/api/logs',
+        level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

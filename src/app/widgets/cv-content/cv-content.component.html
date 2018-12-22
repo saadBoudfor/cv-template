@@ -1,4 +1,3 @@
-<app-cv-header *ngIf="getImage('header').isEnabled" [state]="state" [cvLogo]="getImage('header').image"></app-cv-header>
 <app-garde-page></app-garde-page>
 <app-description-widget *ngIf="getImage('header').isEnabled"  [userDetails]="resume.userDetail"></app-description-widget>
 <app-service-page [services]="resume.services"></app-service-page>
