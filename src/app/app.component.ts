@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   public headerOption: HeaderOption = {
     state: 'hide',
     logo: Widget.get('header').image,
-    back: false
+    back: true
   };
   public showDetails: boolean = false;
 

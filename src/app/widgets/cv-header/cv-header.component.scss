@@ -4,40 +4,39 @@ header {
   &.show {
     border-bottom: 1px solid var(--blue);
     background: var(--blue);
-    transition: background 0.8s ease ;
+    transition: background 0.8s ease;
   }
   &.hide {
     border-bottom: none;
     background: none;
-    transition: background 0.8s ease ;
-  }
-  &.fixed {
-    border-bottom: 1px solid var(--blue);
-    background: var(--blue);
+    transition: background 0.8s ease;
   }
   z-index: 800;
   position: fixed;
-  left: 0; right: 0; top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
   height: $icon-size + 2;
-
 
   div.content {
     margin: 7px 14px 0 14px;
     img.logo {
       width: $icon-size;
-      margin-top: 3px;
+      margin-top: 5px;
     }
     i.material-icons {
       color: var(--green);
-      font-size: $icon-size - 10;
-      &.right {
+      font-size: 35px;
+      top: 4px;
+      position: relative;
+      &.back {
+        float: left;
+        font-size: 30px;
+        top: 6px;
+      }
+      &.menu {
         float: right;
       }
     }
   }
-}
-
-
-main {
-  margin-top: 150px;
 }
