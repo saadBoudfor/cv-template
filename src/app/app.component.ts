@@ -7,7 +7,11 @@ import {CvRouterService} from "./services/cv-router.service";
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public state: string = 'top';
+  public headerOption: HeaderOption = {
+    state: 'hide',
+    logo: Widget.get('header').image,
+    back: false
+  };
   public showDetails: boolean = false;
 
   constructor(private $routerService: CvRouterService) {
@@ -15,10 +19,9 @@ export class AppComponent implements OnInit {
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    if (window.scrollY === 0) {
-      this.state = 'top'
-    } else {
-      this.state = 'scrolling'
+    this.headerOption.state = 'show';
+    if (!this.showDetails) {
+      this.headerOption.state = (window.scrollY === 0)?'hide': 'show';
     }
   }
 
@@ -28,9 +31,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.$routerService.Currentlocation.subscribe(location => {
-      if (location !== this.$routerService.$locations.resume) {
-        this.showDetails = true;
-      }
+      this.showDetails = location !== this.$routerService.$locations.resume;
     })
   }
 

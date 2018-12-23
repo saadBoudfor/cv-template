@@ -1,4 +1,4 @@
-<app-cv-header *ngIf="getImage('header').isEnabled" [state]="state" [cvLogo]="getImage('header').image"></app-cv-header>
+<app-cv-header [option] = "headerOption"></app-cv-header>
 <app-tab-container [showDetails]="showDetails">
   <div content>
     <app-cv-content></app-cv-content>

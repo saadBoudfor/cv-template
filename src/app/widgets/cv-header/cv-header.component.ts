@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core';
-import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-cv-header',
@@ -7,24 +6,15 @@ import {environment} from "../../../environments/environment";
   styleUrls: ['cv-header.component.scss']
 })
 export class CvHeaderComponent {
-  private _state: string = '';
-  private _cvLogo: string = '';
+  private _option: HeaderOption;
 
-  @Input()
-  set state(state: string) {
-    this._state = state;
-  }
-
-  get state(): string {
-    return this._state;
+  get option(): HeaderOption {
+    return this._option;
   }
 
   @Input()
-  set cvLogo(logo: string) {
-    this._cvLogo = logo;
+  set option(value: HeaderOption) {
+    this._option = value;
   }
 
-  get cvLogo(): string {
-    return this._cvLogo;
-  }
 }

@@ -18,7 +18,7 @@ export class CardDetailComponent implements OnInit {
     job: "Développement /Conception d'applications mobiles hybrides.",
     company: 'Laboratoires Genevrier',
     period: 'avril 2016 - Septembre 2016 (6 mois)',
-    img: 'http://127.0.0.1:8887/photos/boudfor/experiences/Orange_Bank_2017.png',
+    img: 'http://176.142.246.203:9000/api/photos/boudfor/experiences/Orange_Bank_2017.png',
   };
 
   public experienceDetails: any = {
