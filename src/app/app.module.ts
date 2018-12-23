@@ -25,6 +25,7 @@ import {CardDetailComponent} from './widgets/card-detail/card-detail.component';
 import {CvContentComponent} from './widgets/cv-content/cv-content.component';
 import {TabContainerComponent} from './tab-container/tab-container.component';
 import {NgxLoggerLevel, LoggerModule} from "ngx-logger";
+import { SidebarComponent } from './widgets/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {NgxLoggerLevel, LoggerModule} from "ngx-logger";
     ServicePageComponent,
     CardDetailComponent,
     CvContentComponent,
-    TabContainerComponent
+    TabContainerComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

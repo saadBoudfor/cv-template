@@ -7,12 +7,13 @@ import {CvRouterService} from "./services/cv-router.service";
   styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
+  public showDetails: boolean = false;
+  public menuClicked: boolean = false;
   public headerOption: HeaderOption = {
     state: 'hide',
     logo: Widget.get('header').image,
-    back: true
+    back: this.showDetails
   };
-  public showDetails: boolean = false;
 
   constructor(private $routerService: CvRouterService) {
   }
@@ -33,6 +34,11 @@ export class AppComponent implements OnInit {
     this.$routerService.Currentlocation.subscribe(location => {
       this.showDetails = location !== this.$routerService.$locations.resume;
     })
+  }
+
+  onMenuClick() {
+    console.log(this.menuClicked);
+    this.menuClicked = !this.menuClicked;
   }
 
 }

@@ -1,9 +1,15 @@
-<app-cv-header [option] = "headerOption"></app-cv-header>
-<app-tab-container [showDetails]="showDetails">
-  <div content>
-    <app-cv-content></app-cv-content>
-  </div>
-  <div details>
-    <app-card-detail></app-card-detail>
-  </div>
-</app-tab-container>
+<app-cv-header [option] = "headerOption" (onMenuClick)="onMenuClick()"></app-cv-header>
+<ng-container *ngIf="!menuClicked">
+  <app-cv-content></app-cv-content>
+</ng-container>
+
+<ng-container *ngIf="menuClicked">
+  <app-tab-container [showDetails]="showDetails">
+    <div content>
+      <app-sidebar></app-sidebar>
+    </div>
+    <div details>
+      <app-card-detail></app-card-detail>
+    </div>
+  </app-tab-container>
+</ng-container>

@@ -2,6 +2,7 @@
   <div class="content">
     <i *ngIf="option.back" class="material-icons back">arrow_back_ios</i>
     <img class="logo" src="{{option.logo}}" alt="resume-logo">
-    <i class="material-icons menu">menu</i>
+    <i *ngIf="!menuIsClicked" class="material-icons menu" (click)="toggleMenu($event)">menu</i>
+    <i *ngIf="menuIsClicked" class="material-icons menu" (click)="toggleMenu($event)">close</i>
   </div>
 </header>

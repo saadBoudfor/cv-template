@@ -1,0 +1,17 @@
+<div class="side-bar">
+    <ul>
+      <li class="title">Menu</li>
+      <li *ngFor = 'let widget of widgetList'>
+        <a href="#">
+          <i class="material-icons">{{widget.icon}}</i>
+          <span class="text">{{widget.title}}</span>
+        </a>
+      </li>
+        <li class="title">Action</li>
+        <li class="with-button">
+          <div class="button-wrapper">
+            <button class="button">Télécharger mon CV</button>
+          </div>
+        </li>
+    </ul>
+</div>
