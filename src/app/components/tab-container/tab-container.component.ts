@@ -6,7 +6,7 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./tab-container.component.scss']
 })
 export class TabContainerComponent implements OnInit {
-  @Input() showDetails = false;
+  @Input() content = 'content';
 
   constructor() { }
 

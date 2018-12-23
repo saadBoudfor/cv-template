@@ -9,7 +9,7 @@ import {NGXLogger} from "ngx-logger";
   providedIn: 'root'
 })
 export class CvRouterService {
-  public $locations: any = {resume: '/data/cv-v1.json', experience:  ''};
+  public $locations: any = {resume: '/data/cv-v1.json', experience:  '', menu: '/menu'};
   private $currentLocation = new BehaviorSubject<string>(this.$locations.resume);
   private $resumeData = new BehaviorSubject<Resume>(null);
 

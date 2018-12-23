@@ -1,0 +1,13 @@
+<div class="cv-container">
+  <section  class="content" [class.show]="content == 'content'">
+    <ng-content select = "[content]"></ng-content>
+  </section>
+
+  <section  class="details" [class.show]="content == 'details'">
+    <ng-content select = "[details]"></ng-content>
+  </section>
+
+  <section  class="menu" [class.show]="content == 'menu'">
+    <ng-content select = "[menu]"></ng-content>
+  </section>
+</div>

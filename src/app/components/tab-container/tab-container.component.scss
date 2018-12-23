@@ -11,5 +11,11 @@ div.cv-container {
       display: block;
     }
   }
+  section.menu {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
 
 }
