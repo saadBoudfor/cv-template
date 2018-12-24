@@ -4,5 +4,4 @@
 interface HeaderOption {
   state: string;
   logo: string;
-  back: boolean;
 }

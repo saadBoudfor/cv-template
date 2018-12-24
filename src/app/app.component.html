@@ -1,13 +1,17 @@
-<app-cv-header [option]="headerOption" (onMenuClick)="onMenuClick()"></app-cv-header>
-<app-tab-container [content]="content">
-  <div content>
-    <app-cv-content></app-cv-content>
-  </div>
-  <div details>
-    <app-card-detail></app-card-detail>
-  </div>
+<app-cv-header [option]="headerOption"></app-cv-header>
 
-  <div menu>
+<app-tab-container [currentContent]="menuTab">
+  <div section1>
+    <app-tab-container [currentContent]="contentTab">
+      <div section1>
+        <app-cv-content></app-cv-content>
+      </div>
+      <div section2>
+        <app-card-detail></app-card-detail>
+      </div>
+    </app-tab-container>
+  </div>
+  <div section2>
     <app-sidebar></app-sidebar>
   </div>
 </app-tab-container>

@@ -1,8 +1,8 @@
 <header id="cv-header" class="{{option.state}}" >
   <div class="content">
-    <i *ngIf="option.back" class="material-icons back">arrow_back_ios</i>
+    <i *ngIf="back" class="material-icons back" (click) = "backClicked()">arrow_back</i>
     <img class="logo" src="{{option.logo}}" alt="resume-logo">
-    <i *ngIf="!menuIsClicked" class="material-icons menu" (click)="toggleMenu($event)">menu</i>
-    <i *ngIf="menuIsClicked" class="material-icons menu" (click)="toggleMenu($event)">close</i>
+    <i *ngIf="!menuIsClicked" class="material-icons menu" (click)="toggleMenu()">menu</i>
+    <i *ngIf="menuIsClicked" class="material-icons menu" (click)="toggleMenu()">close</i>
   </div>
 </header>

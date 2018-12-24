@@ -6,9 +6,10 @@ import {Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./tab-container.component.scss']
 })
 export class TabContainerComponent implements OnInit {
-  @Input() content = 'content';
+  @Input() currentContent: string = 'section1';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
