@@ -20,9 +20,11 @@ export class AppComponent implements OnInit {
   @HostListener("window:scroll", [])
   onWindowScroll() {
     this.headerOption.state = 'show';
-    if (this.contentTab === 'section1') {
-      this.headerOption.state = (window.scrollY === 0) ? 'hide' : 'show';
-    }
+    this.$routerService.Currentlocation.subscribe(location => {
+      if ( location === this.$routerService.$locations.resume) {
+        this.headerOption.state = (window.scrollY === 0) ? 'hide' : 'show';
+      }
+    });
   }
 
   getImage(name) {
